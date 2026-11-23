@@ -1,0 +1,22 @@
+Capstone Project — The "Agentic" Hackathon
+Project: Expense Tracker (Angular + git submodules, built with Claude Code)
+
+Main repository (parent, with submodules):
+  https://github.com/<your-username>/expense-tracker
+
+Submodules:
+  expense-core (business logic):  https://github.com/<your-username>/expense-core
+  expense-web  (Angular UI):      https://github.com/<your-username>/expense-web
+
+Documentation:
+  README (setup):        https://github.com/<your-username>/expense-tracker/blob/main/README.md
+  context/ folder:       https://github.com/<your-username>/expense-tracker/tree/main/context
+  EXPERIENCE.md:         https://github.com/<your-username>/expense-tracker/blob/main/EXPERIENCE.md
+  AI tool usage report:  https://github.com/<your-username>/expense-tracker/blob/main/AI_USAGE.md
+
+Tests:
+  Coverage summary:      https://github.com/<your-username>/expense-tracker/blob/main/coverage/SUMMARY.md
+  CI runs:               https://github.com/<your-username>/expense-tracker/actions
+
+Chat logs:
+  https://github.com/<your-username>/expense-tracker/tree/main/chat-logs

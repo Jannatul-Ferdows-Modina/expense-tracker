@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Unit + E2E tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            core/package-lock.json
+            web/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          npm --prefix core ci
+          npm --prefix web ci
+
+      - name: Type-check core
+        run: npm --prefix core run typecheck
+
+      - name: Unit tests with coverage (core + web)
+        run: npm run coverage
+
+      - name: Install Playwright browser
+        run: npm --prefix web exec -- playwright install --with-deps chromium
+
+      - name: Playwright E2E
+        run: npm run test:e2e
+        env:
+          CI: true
+
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: web/playwright-report/
+
+      - name: Coverage summary
+        if: always()
+        run: cat coverage/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"

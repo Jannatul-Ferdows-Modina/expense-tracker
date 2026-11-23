@@ -1,0 +1,6 @@
+[submodule "core"]
+	path = core
+	url = /home/bs01252/D/Work/FED/expense-core
+[submodule "web"]
+	path = web
+	url = /home/bs01252/D/Work/FED/expense-web
