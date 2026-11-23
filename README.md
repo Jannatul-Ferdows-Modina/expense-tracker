@@ -21,7 +21,6 @@ expense-tracker/                 ← this repo (parent)
 ├── .claude/   AI configuration: skills/, commands/, hooks/
 ├── .mcp.json  Playwright MCP server
 ├── CLAUDE.md  project rules for the AI
-├── chat-logs/ exported AI sessions
 ├── coverage/  committed coverage reports (HTML + LCOV + summary)
 ├── scripts/   coverage collection, chat-log export
 ├── EXPERIENCE.md   experience report

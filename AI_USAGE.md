@@ -47,11 +47,3 @@
 | E2E tests | 17 (covering all 7 user stories) |
 | Coverage | core 100 %, web ≈ 99 % lines |
 | TDD evidence | `test:` commits precede `feat:` commits in both submodules |
-
-## 5. Chat logs
-
-See [`chat-logs/`](chat-logs). Exported with:
-
-```bash
-node scripts/export-chat.mjs ~/.claude/projects/<project-dir>/<session-id>.jsonl chat-logs/NN-topic.md --title "..."
-```

@@ -17,6 +17,3 @@ Documentation:
 Tests:
   Coverage summary:      https://github.com/Jannatul-Ferdows-Modina/expense-tracker/blob/main/coverage/SUMMARY.md
   CI runs:               https://github.com/Jannatul-Ferdows-Modina/expense-tracker/actions
-
-Chat logs:
-  https://github.com/Jannatul-Ferdows-Modina/expense-tracker/tree/main/chat-logs
